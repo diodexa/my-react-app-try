@@ -11,11 +11,10 @@ import DatalistExample from './components/TodoApp'
 
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+  <StrictMode >
     <Saklar/>
     <Ketik/>
     <Count/>
     <DatalistExample/>
-  
   </StrictMode>
 )
