@@ -1,17 +1,17 @@
-import { useState } from "react";
+import { UseLike } from "../hook/like.ts"
 
 
 
 
 function Saklar() {
-    const [On, SetOn] = useState(false);
+    const {Like,SetLike} = UseLike ();
     return (
         <>
-        <h1> Lampu : {On? "Mati" : "Nyala"} </h1>
-        <div style={{background: On? "Black" : "White", width: "100vw", justifyContent: "center"}}>
+        <h1> Lampu : {Like? "Mati" : "Nyala"} </h1>
+        <div >
             
-            {On && <p style={{color:"White"}}>Lampu Mati</p>}
-            <button onClick={()=> SetOn(!On)}>Saklar</button>
+            {/* {Like && <p style={{color:"White"}}>Lampu Mati</p>} */}
+            <button onClick={()=> SetLike(!Like)} style={{background: Like? "Blue" : "White", color: Like? "white" : "Black", borderRadius: "50%"}}> {Like? "Dislike" : "Like"}</button>
         </div>
         </>
     )

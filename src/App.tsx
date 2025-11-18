@@ -1,5 +1,7 @@
 import './App.css'
 import Count from './components/Counter'
+import Saklar from './components/togle'
+
 
 
 function App() {
@@ -7,7 +9,9 @@ function App() {
 
   return (
     <>
-      <Count />  
+   
+      <Count />
+      <Saklar />  
     </>
   )
 }
