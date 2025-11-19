@@ -7,9 +7,8 @@ import react from '@vitejs/plugin-react'
 //   plugins: [react()],
 // })
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: command === 'build' ? '/my-react-app-try/' : '/'
-  // base: '/my-react-app-try/', 
-})
+  base: command === 'build' ? '/my-react-app-try/' : '/',
+}))
 

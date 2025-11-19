@@ -14,12 +14,15 @@
 }
 
 a {
+  padding: 1em;
+  will-change: filter;
+  transition: filter 300ms;
   font-weight: 500;
-  color: #646cff;
+  color: #fffefe;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #000000;
 }
 
 body {
@@ -28,6 +31,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #1a1a1a;
+  color: white;
 }
 
 h1 {

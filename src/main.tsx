@@ -6,8 +6,13 @@ import {
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
-import TermsPage from "../src/pages/TermsPage.tsx";
+import HomePage from "../src/pages/HomePage.tsx";
+import Product from "../src/pages/Product.tsx";
+import TermsPage from './pages/TermsPage.tsx';
+import Contact from './pages/Contact.tsx';
 import Notfound from "../src/pages/NotFound.tsx";
+import ProductDetail from "../src/pages/ProductDetail.tsx";
+
 // import Welcome from './components/welcome.tsx'
 // import Card from './components/card.tsx'
 
@@ -16,10 +21,32 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-  },
-  {
-    path: "/Terms",
-    element: <TermsPage />,
+    children : [
+
+      
+      {
+        index: true,
+        path: "HomePage",
+        element: <HomePage />,
+      },
+      {
+        path: "Product",
+        element: <Product />,
+        
+      },
+      {
+        path: "Product/:NameProduct",
+        element: <ProductDetail />,
+      },
+      {
+        path: "Terms",
+        element: <TermsPage />,
+      },
+      {
+        path: "Contact",
+        element: <Contact />,
+      },
+    ]
   },
   {
     path: "*",
