@@ -53,11 +53,11 @@ const router = createHashRouter ([
         path: "Employees",
         element: <EmployeesPages />,
       },
+      {
+        path: "*",
+        element: <Notfound />,
+      },
     ]
-  },
-  {
-    path: "*",
-    element: <Notfound />,
   },
 ]);
 
