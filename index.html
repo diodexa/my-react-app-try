@@ -9,5 +9,11 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      const base = "/my-react-app-try/";
+      if (location.pathname === base && !location.hash) {
+        location.replace(base + "#/");
+      }
+    </script>
   </body>
 </html>
