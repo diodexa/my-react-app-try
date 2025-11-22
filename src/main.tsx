@@ -30,6 +30,9 @@ const router = createHashRouter ([
       
       {
         index: true,
+        element: <HomePage />,
+      },
+      {
         path: "HomePage",
         element: <HomePage />,
       },
