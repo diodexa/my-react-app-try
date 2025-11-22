@@ -29,7 +29,7 @@ const router = createHashRouter ([
 
       
       {
-        index: true,
+        path: "",
         element: <HomePage />,
       },
       {
